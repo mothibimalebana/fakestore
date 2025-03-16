@@ -1,3 +1,30 @@
+@font-face {
+  font-family: 'Integral CF Regular';
+  src: url('../Integral-CF/FONTSPRINGDEMO-IntegralCFBoldRegular.woff2') format('woff2'),
+      url('../Integral-CF/FONTSPRINGDEMO-IntegralCFBoldRegular.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Integral CF Medium Regular';
+  src: url('../Integral-CF/FONTSPRINGDEMO-IntegralCFMediumRegular.woff2') format('woff2'),
+      url('../Integral-CF/FONTSPRINGDEMO-IntegralCFMediumRegular.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Integral CF';
+  src: url('../Integral-CF/FONTSPRINGDEMO-IntegralCFRegular.woff2') format('woff2'),
+      url('../Integral-CF/FONTSPRINGDEMO-IntegralCFRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
