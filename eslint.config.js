@@ -28,6 +28,9 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      extends: [
+        'plugin:prettier/recommended'
+      ],
     },
   },
 ]
