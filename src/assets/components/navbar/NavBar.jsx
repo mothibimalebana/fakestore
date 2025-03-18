@@ -9,7 +9,7 @@ const Navbar = () => {
                     <div className="logo"><h1>FAKESTORE</h1></div>
                     <div className={styles.navbuttons}>
                         <NavButton label="home"/>
-                        <NavButton label="cart"/>
+                        <NavButton label="shop"/>
                     </div>
                 </div>
                 <div className={styles.navbarRight}>
