@@ -3,6 +3,7 @@ import Navbar from "./assets/components/navbar/NavBar"
 import NavButton from "./assets/components/navbar/Navbuttons"
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import Content from "./assets/components/content/Content";
 
 const App = () => {
   const [products, setProducts] = useState(null);
@@ -19,7 +20,7 @@ const App = () => {
     <>
       <div className="container">
         <Navbar/>
-        <Outlet/>
+        <Content products={products}/>
       </div>
     </>
   )
