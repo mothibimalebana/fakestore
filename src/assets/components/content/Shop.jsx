@@ -1,4 +1,5 @@
-import { Link, useOutletContext } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 const Card = (products) => {
     return(
@@ -23,16 +24,29 @@ const Card = (products) => {
     )
 }
 const Shop = () => {
-    const [productData] = useOutletContext();
-    console.log(productData)
+    const [products, setProducts] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try{
+                const data = await fetch('https://fakestoreapi.com/products');
+                const res = await data.json();
+                setProducts(await res);
+            }
+            catch(error){
+                console.error(error.message)
+            }
+        }
+        fetchData();
+    }, [])
+
+
     return (
         <>
             <div>
                 {
-                    productData.map((product) => {
-                        return(
-                            <Card products={product}/>
-                        )
+                    products.map((product) => {
+                        console.log(product)
                     })
                 }
             </div>
