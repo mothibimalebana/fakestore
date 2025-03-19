@@ -1,4 +1,4 @@
-import { useOutletContext } from "react-router-dom"
+import { Link, useOutletContext } from "react-router-dom"
 
 const Card = (products) => {
     return(
@@ -8,12 +8,12 @@ const Card = (products) => {
                     products.map((product) => {
                         return(
                             <>
-                                <a key={product.id} href={product}>
+                                <Link key={product.id} to={product}>
                                     <div className="card">
                                         <img src={product.image} alt={product.description} />
                                         <h5>{product.title}</h5>
                                     </div>
-                                </a>
+                                </Link>
                             </>
                         )
                     })
