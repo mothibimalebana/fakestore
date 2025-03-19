@@ -3,14 +3,16 @@ import { useOutletContext } from "react-router-dom"
 const Card = (products) => {
     return(
         <>
-            <div className="card">
+            <div className="products">
                 {
                     products.map((product) => {
                         return(
                             <>
-                                <a href={product}>
-                                    <img src={product.image} alt={product.description} />
-                                    <h5>{product.title}</h5>
+                                <a key={product.id} href={product}>
+                                    <div className="card">
+                                        <img src={product.image} alt={product.description} />
+                                        <h5>{product.title}</h5>
+                                    </div>
                                 </a>
                             </>
                         )
