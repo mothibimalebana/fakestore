@@ -1,3 +1,5 @@
+import { useOutletContext } from "react-router-dom"
+
 const Card = (products) => {
     return(
         <>
@@ -18,8 +20,9 @@ const Card = (products) => {
         </>
     )
 }
-const Home = (productData) => {
-
+const Shop = () => {
+    const [productData] = useOutletContext();
+    console.log(productData)
     return (
         <>
             <div>
@@ -35,4 +38,4 @@ const Home = (productData) => {
     )
 }
 
-export default Home
+export default Shop
