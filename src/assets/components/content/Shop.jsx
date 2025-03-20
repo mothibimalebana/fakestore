@@ -1,37 +1,32 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
-const Card = (products) => {
+const Card = (product) => {
     return(
         <>
-            <div className="products">
+            <div className="product">
                 {
-                    products.map((product) => {
-                        return(
-                            <>
-                                <Link key={product.id} to={product}>
-                                    <div className="card">
-                                        <img src={product.image} alt={product.description} />
-                                        <h5>{product.title}</h5>
-                                    </div>
-                                </Link>
-                            </>
-                        )
-                    })
+                    <>
+                        <Link to={product.title}>
+                            <img src={product.image} alt={product.title} />
+                            <h5>{product.title}</h5>
+                            <h6>R{product.price}</h6>
+                        </Link>
+                    </>
                 }
             </div>
         </>
     )
 }
 const Shop = () => {
-    const [products, setProducts] = useState(null);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        const fetchData = async () => {
+        async function fetchData(){
             try{
                 const data = await fetch('https://fakestoreapi.com/products');
                 const res = await data.json();
-                setProducts(await res);
+                setProducts(res);
             }
             catch(error){
                 console.error(error.message)
@@ -44,11 +39,9 @@ const Shop = () => {
     return (
         <>
             <div>
-                {
-                    products.map((product) => {
-                        console.log(product)
-                    })
-                }
+                {products.map((product) => {
+                    return <Card key={product.id} products={product}/>
+                })}
             </div>
         </>
     )
