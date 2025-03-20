@@ -1,0 +1,15 @@
+.product{
+    display: flex;
+    flex-direction: column;
+    color: #242424;
+}
+.productList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.img{
+    width: 296px;
+    height: 444px;
+    object-fit: cover;
+}
