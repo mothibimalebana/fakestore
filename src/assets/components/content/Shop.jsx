@@ -2,15 +2,16 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
 const Card = (product) => {
+    console.log(product.products.title);   
     return(
         <>
             <div className="product">
                 {
                     <>
-                        <Link to={product.title}>
-                            <img src={product.image} alt={product.title} />
-                            <h5>{product.title}</h5>
-                            <h6>R{product.price}</h6>
+                        <Link to={product.products.title}>
+                            <img src={product.products.image} alt={product.products.title} />
+                            <h5>{product.products.title}</h5>
+                            <h6>R{product.products.price}</h6>
                         </Link>
                     </>
                 }
@@ -40,7 +41,9 @@ const Shop = () => {
         <>
             <div>
                 {products.map((product) => {
+                    // console.log(product);
                     return <Card key={product.id} products={product}/>
+
                 })}
             </div>
         </>
