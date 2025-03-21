@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { useContext, useEffect, useState } from "react"
+import { Link, useOutletContext } from "react-router-dom"
 import styles from '../../css/shop.module.css';
 
 
-const Card = (product) => {
+export const Card = (product) => {
     console.log(product.products.id);   
     return(
         <>
@@ -13,7 +13,7 @@ const Card = (product) => {
                         <Link to={`${product.products.id}`}>
                             <img className={styles.img} src={product.products.image} alt={product.products.title} />
                             <h5>{product.products.title}</h5>
-                            <h6>R{product.products.price}</h6>
+                            <h3>${product.products.price}</h3>
                         </Link>
                     </>
                 }
@@ -22,23 +22,7 @@ const Card = (product) => {
     )
 }
 const Shop = () => {
-    const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-        async function fetchData(){
-            try{
-                const data = await fetch('https://fakestoreapi.com/products');
-                const res = await data.json();
-                setProducts(res);
-            }
-            catch(error){
-                console.error(error.message)
-            }
-        }
-        fetchData();
-    }, [])
-
-
+    const [products] = useOutletContext();
     return (
         <>
             <div className={styles.productList}>
