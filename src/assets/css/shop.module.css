@@ -1,7 +1,8 @@
 .product{
     display: flex;
+    flex: 1 0 21%;
     flex-direction: column;
-    color: #242424;
+    align-items: center;
 }
 .productList{
     display: flex;
@@ -9,7 +10,7 @@
     flex-wrap: wrap;
 }
 .img{
-    width: 296px;
-    height: 444px;
-    object-fit: cover;
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
 }

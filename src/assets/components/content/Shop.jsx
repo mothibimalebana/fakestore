@@ -4,13 +4,13 @@ import styles from '../../css/shop.module.css';
 
 
 const Card = (product) => {
-    console.log(product.products.title);   
+    console.log(product.products.id);   
     return(
         <>
             <div className={styles.product}>
                 {
                     <>
-                        <Link to={product.products.title}>
+                        <Link to={`${product.products.id}`}>
                             <img className={styles.img} src={product.products.image} alt={product.products.title} />
                             <h5>{product.products.title}</h5>
                             <h6>R{product.products.price}</h6>
