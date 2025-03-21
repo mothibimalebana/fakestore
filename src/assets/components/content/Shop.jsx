@@ -4,7 +4,6 @@ import styles from '../../css/shop.module.css';
 
 
 export const Card = (product) => {
-    console.log(product.products.id);   
     return(
         <>
             <div className={styles.product}>
