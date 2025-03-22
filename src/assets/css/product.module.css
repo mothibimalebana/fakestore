@@ -1,0 +1,47 @@
+.img{
+    width: 350px;
+    height: 600px;
+    object-fit: contain;
+}
+.title{
+color: #000;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.price{
+color: #000;
+font-family: 'Satoshi';
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.product{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.quantity{
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 62px;
+    background: #F0F0F0;
+    width: fit-content;
+}
+.qInput{
+    -webkit-appearance: none; 
+    background: #F0F0F0;
+    border: none;
+    text-align: center;
+    width: 30px;
+}
+.qButtons{
+    border-radius: 62px;
+    background: #F0F0F0;
+}
+.right{
+    max-width: 50%;
+}
