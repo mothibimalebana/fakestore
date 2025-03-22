@@ -23,6 +23,10 @@ line-height: normal;
     justify-content: space-around;
     flex-direction: row;
 }
+.buttons{
+    display: flex;
+    gap: 1.5rem;
+}
 .quantity{
     display: flex;
     flex-direction: row;
@@ -37,6 +41,11 @@ line-height: normal;
     border: none;
     text-align: center;
     width: 30px;
+}
+.cButton{
+    border-radius: 62px;
+    background: #000;
+    color: #FFFFFF;
 }
 .qButtons{
     border-radius: 62px;
